@@ -4,6 +4,7 @@ metadata:
   name: productcatalogservice
   namespace: ${namespace}
 spec:
+  replicas: ${replicas}
   selector:
     matchLabels:
       app: productcatalogservice
@@ -12,7 +13,6 @@ spec:
       labels:
         app: productcatalogservice
     spec:
-      replicas: ${replicas}
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       securityContext:
